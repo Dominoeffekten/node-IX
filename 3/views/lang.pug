@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  span #{count} 
+  table
+   tr
+    th Country code
+    th Language
+      each lang in la
+        tr
+          td #{lang.countrycode}
+          td #{lang.language}
+
+

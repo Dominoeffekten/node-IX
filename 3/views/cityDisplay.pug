@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+
+  table.tabel-left
+    tr
+      th Country code
+      th City
+      each city in cities
+        tr
+          td #{city.countrycode}
+          td #{city.name}

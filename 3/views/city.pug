@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+
+  form(id='city' action='/city' method='post')
+    div.input
+    span.label City
+      select(name='city')
+        each city in cities
+          option #{city.name}
+    br
+    input(type='submit' value='Go')

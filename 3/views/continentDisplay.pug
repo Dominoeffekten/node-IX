@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1= title
+
+  table.tabel-left
+    tr
+      th Country
+      th Population
+      each country in countries
+        tr
+          td #{country.name}
+          td #{country.population}
+          td #{country.code}
+  table.tabel-left
+    tr
+      th Language
+        each a in Object.keys(arr)
+          tr
+            td= a
+  table.tabel-left
+      tr
+        th Percentage
+          each a in Object.values(arr)
+            tr
+              td= a
+        
+
+
+//-
+  if country.continent == continent.name
+    p yeah
+  else
+    p nope
+
+ 
+
+       if(langs.country == country.country && country.continent == continent.name ){
+                console.log("test " +langs.country);
+                console.log(country.country);
+              }
+    

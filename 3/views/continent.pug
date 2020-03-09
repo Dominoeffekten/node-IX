@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+
+  form(id='continent' action='/continent' method='post')
+    div.input
+      span.label Continent
+      select(name='continent')
+          each continent in cons
+            option #{continent.name}
+    br
+    input(type='submit' value='Go')

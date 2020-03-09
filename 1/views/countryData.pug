@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  h1= title
+  form(id='country' action='/countryData' method='post')
+    div.input
+      span.label Country
+      select(name='ctry')
+        each country in countries
+          option #{country.name}
+    div.input
+      span.label Local name
+      input(type="text", name="lName" placeholder="American Samoa")
+    div.input
+      span.label Country code
+      input(type="text", name="cCode" placeholder="ASM")
+    div.input
+      span.label Short country code
+      input(type="text", name="AS")
+    div.input
+      span.label Continent
+      select(name='cont')
+          each continent in cons
+            option #{continent.name}
+    div.input
+      span.label Region
+      input(type="text", name="region" placeholder="Polynesia")
+    div.input
+      span.label Area in sq km
+      input(type="number", name="area" placeholder="199")
+    div.input
+      span.label Year of Independence
+      input(type="number", name="year")
+    div.input
+      span.label Population
+      input(type="number", name="68000")
+    div.input
+      span.label Life Expectancy
+      input(type="number", name="75.1")
+    div.input
+      span.label GNP
+      input(type="number", name="334")
+    div.input
+      span.label Government Form
+      select(name='forms')
+        each form in gforms
+          option #{form.name}
+    div.input
+      span.label Head of State
+      input(type="text", name="George W. Bush")
+
+    input(type='submit' value='Add')
